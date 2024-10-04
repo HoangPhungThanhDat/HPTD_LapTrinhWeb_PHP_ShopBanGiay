@@ -1,0 +1,388 @@
+@import url('https://use.fontawesome.com/releases/v6.5.1/css/all.css');
+
+body.footer ul {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+
+ footer ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+ footer ul li {
+  width: 40px;
+  height: 40px;
+  color: var(--clr);
+  line-height: 60px;
+  border-radius: 12px;
+  position: relative;
+  transition: all .5s;
+  box-shadow: 0px 8px 16px -6px,
+    0px 0px 16px -6px;
+}
+
+footer ul li a {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  background: transparent;
+  color: var(--clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  animation: icon-out .5s forwards;
+  animation-timing-function: cubic-bezier(0.5, -0.6, 1, 1);
+}
+
+footer ul li:before {
+  content: "";
+  width: 110px;
+  height: 110px;
+  background: var(--clr);
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg) translate(-110%, -23px);
+  z-index: -1;
+  animation: back-out .5s forwards;
+  animation-timing-function: cubic-bezier(0.5, -0.6, 1, 1);
+}
+
+footer ul li {
+  overflow: hidden;
+}
+
+ footer li:hover a {
+  animation: icon-in .5s forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0.4, 1.6);
+}
+
+ footer li:hover:before {
+  animation: back-in .5s forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0.4, 1.6);
+}
+
+@keyframes back-in {
+  0% {
+    transform: rotate(-45deg) translate(-110%, -23px);
+  }
+
+  80% {
+    transform: rotate(-45deg) translate(5%, -23px);
+  }
+
+  100% {
+    transform: rotate(-45deg) translate(0%, -23px);
+  }
+}
+
+@keyframes back-out {
+  0% {
+    transform: rotate(-45deg) translate(0%, -23px);
+  }
+
+  20% {
+    transform: rotate(-45deg) translate(5%, -23px);
+  }
+
+  100% {
+    transform: rotate(-45deg) translate(-120%, -23px);
+  }
+}
+
+@keyframes icon-in {
+  0% {
+    font-size: 1.5em;
+  }
+
+  80% {
+    color: #fff;
+    font-size: 1.75em;
+  }
+
+  100% {
+    color: #fff;
+    font-size: 1.6em;
+  }
+}
+
+@keyframes icon-out {
+  0% {
+    color: #fff;
+    font-size: 1.6em;
+  }
+
+  20% {
+    color: #fff;
+    font-size: 1.75em;
+  }
+
+  100% {
+    font-size: 1.5em;
+  }
+}
+
+
+
+/* CSS CHO SAN PHAM SALE */
+.sale-section {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  padding: 30px 0;
+  color: white;
+}
+.sale-section h1 {
+  margin-bottom: 30px;
+}
+.sale-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  color: black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+}
+.sale-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.sale-card img {
+  max-width: 100%;
+  border-bottom: 1px solid #ddd;
+  transition: opacity 0.2s ease;
+}
+.sale-card-body {
+  padding: 15px;
+}
+.sale-card-title {
+  font-size: 1em;
+  height: 50px;
+  overflow: hidden;
+}
+.sale-card-price {
+  font-size: 1.5em;
+  color: red;
+  margin: 10px 0;
+}
+.sale-card-discount {
+  font-size: 1.2em;
+  color: green;
+}
+.sale-card-old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+}
+.sale-card:hover .sale-badge {
+  opacity: 1;
+}
+.sale-sold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff4b2b;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+}
+.sale-sold::before {
+  content: "🔥";
+  margin-right: 5px;
+}
+.countdown {
+  text-align: right;
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* CSS CHO PHAN TIN TUC  */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.btn-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* CSS CHO PHÂN GIOI THIEU 2 */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.policy-item {
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.policy-item:hover {
+  transform: translateY(-10px);
+}
+
+.policy-icon {
+  font-size: 50px;
+  color: #198754;
+  margin-bottom: 15px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.policy-item:hover .policy-icon {
+  color: #0f5132;
+  transform: scale(1.1);
+}
+
+.policy-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.policy-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* CSS CHO PHAN GIOI THIEU */
+body {
+  background-color: #f8f9fa;
+}
+.section {
+  padding: 60px 0;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 30px;
+}
+.section-content {
+  background-color: #ffffff;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  padding: 20px;
+  transition: transform .3s, box-shadow .3s;
+}
+.section-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,.2);
+}
+.product-image {
+  max-width: 100%;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  transition: transform .3s;
+}
+.product-image:hover {
+  transform: scale(1.05);
+}
+.feature-item {
+  margin-bottom: 20px;
+  transition: background-color .3s;
+}
+.feature-item:hover {
+  background-color: #e9ecef;
+}
+.feature-item h5 {
+  font-weight: 500;
+  color: #495057;
+}
+.testimonials {
+  background-color: #ffffff;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  padding: 20px;
+}
+.testimonial-item {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.testimonial-item:last-child {
+  border-bottom: none;
+}
+.testimonial-item p {
+  font-style: italic;
+  color: #6c757d;
+}
+.testimonial-item .author {
+  font-weight: 500;
+  color: #343a40;
+}
+.stars {
+  color: #ffc107; /* Màu vàng cho sao */
+}
+.stars i {
+  margin-right: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
